@@ -9,9 +9,14 @@ using namespace std;
 
 int main() {
 
-    bool isNewUser = true;
-    cout << boolalpha << isNewUser << endl
-         << noboolalpha << isNewUser;
+    char ch = 'a';
+    cout << ch << endl
+         << +ch << endl;
+
+    ch++;
+
+    cout << ch << endl
+         << +ch ;
 
 
     return 0;
