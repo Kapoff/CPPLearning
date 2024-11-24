@@ -5,27 +5,20 @@ using namespace std;
 
 int main() {
 
-    int tuition{};
-    cout << "You a US citizen? ";
-    string citizen;
-    cin >> citizen;
+    int sales {};
 
+    cout << "How much you made this month? " << endl;
+    cin >> sales;
+    double commission = (sales >10'000) ? .1 : .05; //conditional operator, shorter than full if statement
 
-    if (citizen == "yes") { //brackets are important here, because without them final else ain't recognized
-        cout << "aight, you good..." << endl;
-        cout << "you livin in CA?";
-        string CA;
-        cin >> CA;
-
-        if (CA != "yes")  tuition = 1000;
-
-        if (tuition) cout << "pay up " << tuition << endl;
-        else cout << "you get it for free" << endl;
+    /* replaces this whole thing down there
+    if (sales>10'000) {
+        commission =.1;
     }
+    else commission = .05;
+    */
 
-    // ⇙ this else down here wont get recognized if first "if" is without brackets
-    else cout << "dude, i don't even know rn..." << endl << "Pay up 3k, i guess..." << endl;
-
+    cout << "Commission percent: " << commission*100 << "%." << " For a total of: "<< sales*commission<< endl;
     cout << "Done" << endl;
     return 0;
 }
