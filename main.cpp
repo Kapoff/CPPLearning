@@ -5,20 +5,27 @@ using namespace std;
 
 int main() {
 
-    int sales {};
+    int number1 {};
+    int number2 {};
 
-    cout << "How much you made this month? " << endl;
-    cin >> sales;
-    double commission = (sales >10'000) ? .1 : .05; //conditional operator, shorter than full if statement
+    cout << "Enter two numbers please? " << endl
+         << "Number 1:";
+    cin >> number1;
+    cout << "Number 2:";
+    cin >> number2;
 
-    /* replaces this whole thing down there
-    if (sales>10'000) {
-        commission =.1;
+    if (number1 > number2) {
+        cout << number1 << " is bigger." << endl;
     }
-    else commission = .05;
-    */
+    else if (number1 < number2) {
+        cout << number1 << " is smaller" << endl;
+    }
+    else if (number1 == number2) {
+        cout << "Same numbers? Really? How original...";
+    }
+    else {
+        cout << "I said two numbers... fucksake";
+    }
 
-    cout << "Commission percent: " << commission*100 << "%." << " For a total of: "<< sales*commission<< endl;
-    cout << "Done" << endl;
     return 0;
 }
