@@ -24,6 +24,11 @@ int main() {
     cout << number << endl;
     cout << otherNumber << endl;
 
+    cout << left << setw(10) << "sprint" << setw(10) << "run" << endl
+                 << setw(10) << "crawl"  << setw(10) << "stay" << endl;
+
+    cout << fixed << setprecision(5) << 13.22465;
+
     return 0;
 }
 
