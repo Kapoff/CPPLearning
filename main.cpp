@@ -4,20 +4,28 @@
 using namespace std;
 
 int main() {
-    int temperature;
-    cout << "Enter temperature in kelvin(???): ";
-    cin >> temperature;
 
-    if (temperature <= 60) {
-        cout << "is Cold in dis besh" << endl;
-        cout << "You bettah dress up for the weather" << endl;
+    int tuition{};
+    cout << "You a US citizen? ";
+    string citizen;
+    cin >> citizen;
+
+
+    if (citizen == "yes") { //brackets are important here, because without them final else ain't recognized
+        cout << "aight, you good..." << endl;
+        cout << "you livin in CA?";
+        string CA;
+        cin >> CA;
+
+        if (CA != "yes")  tuition = 1000;
+
+        if (tuition) cout << "pay up " << tuition << endl;
+        else cout << "you get it for free" << endl;
     }
-    else if (temperature == 69) cout << "Nice! =D" << endl;
 
-    else if (temperature > 60 && temperature != 69)
-        cout << "well, don't be bitchin bout it then..." << endl;
-    else
-        cout << "dude, i don't even know rn..." << endl;
+    // ⇙ this else down here wont get recognized if first "if" is without brackets
+    else cout << "dude, i don't even know rn..." << endl << "Pay up 3k, i guess..." << endl;
+
     cout << "Done" << endl;
     return 0;
 }
