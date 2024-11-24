@@ -9,10 +9,10 @@ using namespace std;
 
 int main() {
 
+    bool isNewUser = true;
+    cout << boolalpha << isNewUser << endl
+         << noboolalpha << isNewUser;
 
-    auto number = numeric_limits<short>::min();
-    cout << number << endl;
-    cout << sizeof(number);
 
     return 0;
 }
