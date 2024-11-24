@@ -5,23 +5,12 @@ using namespace std;
 
 int main() {
 
-    string names[3];
-    cout << "Enter 3 Names " << endl;
+    int x = 10;
+    int y = 3;
 
-    cout << "Name 1: ";
-    getline(cin,names[0]);
-
-    cout << "Name 2: ";
-    getline(cin,names[1]);
-
-    cout << "Name 3: ";
-    getline(cin,names[2]);
-
-    cout << "what name do you prefer?";
-    short prefferedName;
-    cin >> prefferedName;
-
-    cout << endl << "The prefered name is " << names[prefferedName-1] << endl;
-
+    double z = (double)x / y; // C-style cast, may create issues/
+    double z_butBetter = static_cast<double>(x) / y; //static cast is better and safer
+    cout << z << endl
+         << z_butBetter << endl;
     return 0;
 }
