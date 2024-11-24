@@ -1,13 +1,27 @@
 #include <iostream>
-#include <iomanip>
+
 
 using namespace std;
 
 int main() {
 
-    int numbers[5] = {10,12,55,66};
-    numbers[0] = 55;
-    cout <<numbers[4] << endl;
+    string names[3];
+    cout << "Enter 3 Names " << endl;
+
+    cout << "Name 1: ";
+    getline(cin,names[0]);
+
+    cout << "Name 2: ";
+    getline(cin,names[1]);
+
+    cout << "Name 3: ";
+    getline(cin,names[2]);
+
+    cout << "what name do you prefer?";
+    short prefferedName;
+    cin >> prefferedName;
+
+    cout << endl << "The prefered name is " << names[prefferedName-1] << endl;
 
     return 0;
 }
