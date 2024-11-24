@@ -4,15 +4,24 @@
 using namespace std;
 
 int main() {
+    // order of logical opperators
+    // ()
+    //!
+    //&&
+    //||
 
-    int age;
-    cout << "Enter your age: ";
-    cin >> age;
-    cout << "Enter your salary: ";
-    float salary;
-    cin >> salary;
+    bool a = true;
+    bool b = false;
+    bool c = false;
 
-    bool isEligible = (age > 18 && age < 65) || (age >65 && salary >= 3000); // || is for 'or' && is for 'and'
-    cout <<boolalpha << "Are you forbidden from participating? : " << !isEligible << endl; // ! is for inverting bool
+    bool result = b && !a;
+    cout << boolalpha << result << endl;
+
+    result = a || b && c;
+    cout << boolalpha << result << endl;
+
+    result = (a || b) && c;
+    cout << boolalpha << result << endl;
+
     return 0;
 }
