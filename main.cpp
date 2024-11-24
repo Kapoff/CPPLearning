@@ -4,53 +4,20 @@
 using namespace std;
 
 int main() {
-    // order of logical opperators
-    // ()
-    //!
-    //&&
-    //||
+    int temperature;
+    cout << "Enter temperature in kelvin(???): ";
+    cin >> temperature;
 
-    cout << "Are you eligible to work with us? Let's find out! " << endl;
+    if (temperature <= 60) {
+        cout << "is Cold in dis besh" << endl;
+        cout << "You bettah dress up for the weather" << endl;
+    }
+    else if (temperature == 69) cout << "Nice! =D" << endl;
 
-    cout << "Do you have a Bachelor's degree?" << endl;
-    bool degree;
-    string degree_answer;
-    cin >> degree_answer;
-     if (degree_answer == "yes")
-    {
-         degree = true;
-     }
-    else {
-        degree = false;
-    }
-
-    cout << "Do you have at least 2 years of work experience?" << endl;
-
-    bool work;
-    string work_answer;
-    cin >> work_answer;
-    if (work_answer == "yes") {
-        work = true;
-    }
-    else {
-        work = false;
-    }
-    bool citizen;
-    cout << "Do you have a US citizenship?" << endl;
-    string citizen_answer;
-    cin >> citizen_answer;
-
-    if (citizen_answer == "yes") {
-        citizen = true;
-    }
-    else {
-        citizen = false;
-    }
-
-    string result = "Sorry, you are not eligible.";
-    if ((degree || work )&& citizen) {
-        result = "Congratulations, you qualify!";
-    }
-    cout << result << endl;
+    else if (temperature > 60 && temperature != 69)
+        cout << "well, don't be bitchin bout it then..." << endl;
+    else
+        cout << "dude, i don't even know rn..." << endl;
+    cout << "Done" << endl;
     return 0;
 }
