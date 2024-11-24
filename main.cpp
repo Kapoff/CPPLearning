@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include <iomanip>
+#include <limits>
 
 using namespace std;
 
@@ -9,11 +10,9 @@ using namespace std;
 int main() {
 
 
-
-    cout << left << setw(15) << "Course" <<              setw(10) << "Students" << endl
-                 << setw(15) << "C++"        << right << setw(10) << "100" << endl
-         << left << setw(15) << "JavaScript" << right << setw(10) << "50" << endl;
-
+    auto number = numeric_limits<short>::min();
+    cout << number << endl;
+    cout << sizeof(number);
 
     return 0;
 }
