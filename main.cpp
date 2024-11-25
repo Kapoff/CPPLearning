@@ -5,27 +5,31 @@ using namespace std;
 
 int main() {
 
-    int number1 {};
-    int number2 {};
+    double number1 {};
+    double number2 {};
 
     cout << "Enter two numbers please? " << endl
          << "Number 1:";
     cin >> number1;
     cout << "Number 2:";
     cin >> number2;
+    cout << "Enter an opperator";
+    char op{};
+    cin >> op;
 
-    if (number1 > number2) {
-        cout << number1 << " is bigger." << endl;
+    double result{};
+
+    bool opValid = true;
+    switch (op) {
+        case '+': result = number1 + number2; break;
+        case '-': result = number1 - number2; break;
+        case '*': result = number1 * number2; break;
+        case '/': result = number1 / number2; break;
+        //case '%': result = static_cast<double>(number1) % number2; break; // suggested by Clion, but gives error on operator, skipping for now
+        default: cout << "Invalid operation" << endl; opValid = false;
     }
-    else if (number1 < number2) {
-        cout << number1 << " is smaller" << endl;
-    }
-    else if (number1 == number2) {
-        cout << "Same numbers? Really? How original...";
-    }
-    else {
-        cout << "I said two numbers... fucksake";
-    }
+    if (opValid) cout << "Result: " << result << endl;
+
 
     return 0;
 }
