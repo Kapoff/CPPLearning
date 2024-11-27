@@ -4,15 +4,31 @@
 
 using namespace std;
 
-double calcTax(double income, double taxRate = .2256) {
-    return income*taxRate;
+
+// each function has its own signature.
+// Signature = name + (number and type of parameters)
+
+void greet (string name) { // signature = name" greet + (string)
+    cout <<"Hello "<<name<<endl;
 }
+
+void greet(string title, string name) {// signature = name" greet + (string + string)
+    cout <<"Hello "<<title<<" "<<name<<endl;
+}
+
+// this function WILL fail to compile because it has the same signature as previous one.
+/*
+void greet(string firstName, string lastName) {
+    cout <<"Hello "<<firstName<<" "<<lastName<<endl;
+}
+*/
 
 
 int main() {
 
-     double taxes = calcTax(4956.33); //seccond arg is optional because it has a default value
 
-    cout << taxes;
+    //both functions will run, because they have different signatures
+    greet("Gorn");
+    greet("Dr", "Gorn");
     return 0;
 }
