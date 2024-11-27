@@ -4,17 +4,17 @@
 
 using namespace std;
 
-string fullName(string firstName, string  lastName) {
-    return firstName + " " + lastName;
+int max(int a, int b) {
+    return a>b ? a : b;
 }
 
-void greet (string name) {
-    cout << "Hello " << name << endl;
-}
 
 int main() {
-
-    greet(fullName("tired",", I am dad."));
+    int a =0;
+    int b =0;
+    cout << "enter two numbers:" << endl;
+    cin >> a >> b;
+    cout<< "the bigger number is " << max(a, b);
 
     return 0;
 }
