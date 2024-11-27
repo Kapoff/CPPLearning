@@ -4,17 +4,15 @@
 
 using namespace std;
 
-int max(int a, int b) {
-    return a>b ? a : b;
+double calcTax(double income, double taxRate = .2256) {
+    return income*taxRate;
 }
 
 
 int main() {
-    int a =0;
-    int b =0;
-    cout << "enter two numbers:" << endl;
-    cin >> a >> b;
-    cout<< "the bigger number is " << max(a, b);
 
+     double taxes = calcTax(4956.33); //seccond arg is optional because it has a default value
+
+    cout << taxes;
     return 0;
 }
