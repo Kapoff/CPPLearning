@@ -4,18 +4,14 @@
 using namespace std;
 
 int main() {
-    int myNum = 7;
-    int number{};
-    int counter = 0;
+    int array_size[] = {4, 3};
+    cout << "Enter the size of the array:";
+    cin >> array_size[0] >> array_size[1];
 
-    // do while executes the block after do before evaluation of the condition
-    // thus it will always be run at least once
-    do {
-        cout << "Enter a number:";
-        cin >> number;
-        counter++;
-        if (counter > 5 && !(number>=1 && number<=5) ) cout << "Hint: it's smaller than 6" << endl;
-    } while (number<1 || number>5);
-    cout << "yay!" << endl;
+    for (int x = 1; x <=array_size[0]; x++) {
+        for (int y=1; y<=array_size[1]; y++) {
+            cout << "(" << x << "," << y << ")" << endl;
+        }
+    }
     return 0;
 }
