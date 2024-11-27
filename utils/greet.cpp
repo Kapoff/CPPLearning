@@ -6,6 +6,8 @@
 
 using namespace std;
 
-void greet (string name) {
-    cout <<"Hello " << name << endl;
+namespace messaging {// defining namespace to avoid function name conflicts (same as in header file)
+    void greet (string name) {
+        cout <<"Hello " << name << endl;
+    }
 }

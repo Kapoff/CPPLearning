@@ -3,6 +3,9 @@
 
 #include <string>
 
-void greet (std::string name);
+namespace messaging { // defining namespace to avoid function name conflicts
+    void greet (std::string name);
+}
+
 
 #endif //UTILS_GREET
