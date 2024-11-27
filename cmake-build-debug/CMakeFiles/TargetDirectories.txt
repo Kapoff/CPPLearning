@@ -1,3 +1,0 @@
-S:/Git/CPPLearning/cmake-build-debug/CMakeFiles/CPPLearning.dir
-S:/Git/CPPLearning/cmake-build-debug/CMakeFiles/edit_cache.dir
-S:/Git/CPPLearning/cmake-build-debug/CMakeFiles/rebuild_cache.dir
