@@ -4,16 +4,20 @@
 
 using namespace std;
 
-void increaseAmount(double& amount) { // we can pass parameters by ref by tagging them with & after their type
-    amount *=1.2;
-}
+//function declaration (celling compiler that it exists, without specifying what it does)
+void greet (string name);
+
+
 
 
 int main() {
 
-    double price = 100.1;
-    increaseAmount(price); // this will pass the value of price by ref, instead of copy
-    cout << price << endl;
+    greet ("john"); // will still run,
 
     return 0;
+}
+
+//function definition (tells the compiler what the function does)
+void greet (string name) {
+    cout <<"hello" << name << endl;
 }
