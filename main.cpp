@@ -7,19 +7,15 @@
 using namespace std;
 
 int main() {
-    int numbers[] = {19, 2, 34, 4, 5 };
-    cout <<"Arrays has " << size(numbers) << " numbers in it." << endl;
+    int first[] = {1, 2, 3, 4, 5};
+    // int second[] = first; // does not work, c++ gets mad
 
-    cout << "output with size()" << endl;
-    for ( int i = 0; i < size(numbers); i++) { // size() gives the size ofthe array directly
-        cout << numbers[i] << endl;
+    int second[size(first)]; // initialize array with the same size as initial array
+    for (int i = 0; i <size(first); ++i) { // loop through indices and copy one by one
+        second[i] = first[i];
     }
 
-    cout << "output with sizeof()" << endl;
-    for ( int i = 0; i < sizeof(numbers)/sizeof(int); i++) { // sizeof() relies of byt size of the element sampled.
-        cout << numbers[i] << endl;
-        }
-
-
+    for (int number:second)
+        cout << number << " ";
     return 0;
 }
