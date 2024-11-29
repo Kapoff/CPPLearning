@@ -6,16 +6,23 @@
 
 using namespace std;
 
+/*
+void printingNumbers(int numbers[]) {
+            // will not work, because numbers[] as passed though the functions args, is just a pointer
+    for (int i = 0; i < size(numbers); i++)
+        cout << numbers[i] << " ";
+}*/
+void printingNumbers(int numbers[], int arraySize) {
+    // need to add param to pass array size, in order to loop over array
+    for (int i = 0; i < arraySize; i++)
+        cout << numbers[i] << " ";
+}
+
 int main() {
     int first[] = {1, 2, 3, 4, 5};
-    // int second[] = first; // does not work, c++ gets mad
+    int other[] = {1, 2, 3, 4, 5, 434};
 
-    int second[size(first)]; // initialize array with the same size as initial array
-    for (int i = 0; i <size(first); ++i) { // loop through indices and copy one by one
-        second[i] = first[i];
-    }
+    printingNumbers(first, size(first));
 
-    for (int number:second)
-        cout << number << " ";
     return 0;
 }
