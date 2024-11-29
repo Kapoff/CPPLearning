@@ -10,22 +10,20 @@ using namespace std;
 
 
 int main() {
-    float matrix [3][3] = {215.54, 41.546,564.1,
-                         -45,359.3,0,
-                         1,1,1};
-    float array [2][3] = {
-        {1,2,3},
-        {4,5,6}};
-//can be done both ways apparently
-    cout << "Transform matrix be like: " << endl;
 
-    for ( int x = 0; x < size(matrix); x++) {
-        for ( int y = 0; y < size(matrix[x]); y++) {
-            cout <<setw(7) <<  matrix[x][y] << " ";
-        }
-        cout << endl;
-    }
-    cout << "array size: " << size(matrix) << " by " <<size(matrix[1]) << endl;
+    int numero = 10;
+    int salario = 2356;
+    int* pointer = &numero; // creating a pointer with type* and passing the var by ref with &nameOfVar
+    // pointer needs to be the same data type
+
+    cout << *pointer << endl; //using the pointer to print out the value of the thing it points to
+
+    *pointer = 666; //using the pointer to set the thing it point to instead of setting the thing by name directly
+
+    cout << numero << endl; // printing the modifier thing though a pointer to confirm it worked.
+
+    pointer = &salario; //a pointer can also be re-indicated
+    cout << *pointer << endl;
 
     return 0;
 }
