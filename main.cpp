@@ -8,19 +8,30 @@
 
 using namespace std;
 
-void swapVars (float* var1, float* var2) {
-    float temp = *var1;
-    *var1 = *var2;
-    *var2 = temp;
-}
+
 
 int main() {
-    float shit = 100;
-    float lolz = 144;
+    float baba[] = {1, 2, 333, 4, 5, 6, 7, 8};
 
-    cout << "OG order: " << shit << " " << lolz << endl;
+    float* ptr = &baba[size(baba)-1];
 
-    swapVars(&shit,&lolz);
-    cout << "Swapped order: " << shit << " " << lolz << endl;
+    while (ptr >= baba) {
+        // using baba like this because technically, baba is a pointer to baba[0], so we compare addresses
+        // this means that we walk through the array, backwards becausee --, until we hit the address of baba[0]
+        cout <<setw(12) <<  *ptr<<" ";
+        ptr--;
+    }
+
+    //case in point, this will print that ptr is, instead of what it points to, because ptr != *ptr
+    // ptr is just address in memory, *ptr is what is stored at that address
+    cout << endl;
+    ptr = &baba[size(baba)-1]; // resetting in to last index because we decremented it a bunch up top
+    while (ptr >= baba) {
+
+        cout << ptr <<" "; // printing the actual pointer (address), not the value inside
+        ptr--;
+    }
+    cout << endl <<size(baba)-1 << endl;
+
     return 0;
 }
