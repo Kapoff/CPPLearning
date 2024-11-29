@@ -6,29 +6,34 @@
 
 using namespace std;
 
-int searchArray(auto array, int arraySize, auto elementToFind) {
-    for (int i = 0; i < arraySize; i++) {
-        if (array[i] == elementToFind) {
-            return i;
+void bubbleSortArray(auto array[], int arraySize) {
+    for (int pass = 0; pass < arraySize; pass++) {
+        for (int i = 0; i < arraySize - 1; i++) {
+            if (array[i] > array[i + 1]) {
+                swap(array[i], array[i + 1]);
+            }
         }
     }
-        return -1;
+
+
+
 }
 
 
 int main() {
 
-    string values [] = {"Joe", "Mark", "3"};
+    int values [] = {5, 6, 1,2,468,4,6,7};
 
-    auto search = "3";
-        int index = searchArray(values, size(values), search);
+    cout << " OG array is : ";
+    for (int i = 0; i < size(values); ++i)
+        cout << values[i] << " ";
 
-    if (index == -1) {
-        cout << "No such element in array" << endl;
-    }
-    else {
 
-    cout << search << " is located at " << index << endl;
-    }
+    cout << endl;
+    cout << " sorted array is : ";
+    bubbleSortArray(values, size(values));
+    for (int i = 0; i < size(values); ++i)
+        cout << values[i] << " ";
+
     return 0;
 }
