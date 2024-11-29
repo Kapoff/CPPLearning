@@ -6,17 +6,29 @@
 
 using namespace std;
 
+int searchArray(auto array, int arraySize, auto elementToFind) {
+    for (int i = 0; i < arraySize; i++) {
+        if (array[i] == elementToFind) {
+            return i;
+        }
+    }
+        return -1;
+}
 
 
 int main() {
 
-    int values [3] = {1, 2, 3};
-    // int x = values[0];
-    // int y = values[1];
-    // int z = values[2];
+    string values [] = {"Joe", "Mark", "3"};
 
-    //now the same thing byt better
-    auto [x,y,z] = values; //called unpacking in python and in C++: structured binding
-    cout << x << ", " << y << ", " << z << endl;
+    auto search = "3";
+        int index = searchArray(values, size(values), search);
+
+    if (index == -1) {
+        cout << "No such element in array" << endl;
+    }
+    else {
+
+    cout << search << " is located at " << index << endl;
+    }
     return 0;
 }
