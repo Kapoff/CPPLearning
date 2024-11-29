@@ -8,22 +8,24 @@
 
 using namespace std;
 
+void makeShitBigger (float* number) { //passing the thing as a pointer
+    *number *= 1.2; //making the stuff inside the var that the pointer is pointing to bigger
+}
 
 int main() {
+    float shit = 100;
+    makeShitBigger(&shit); // passing the var by ref so the pointer can work
+    cout <<shit << endl;
+    float* pointy = &shit;
+    makeShitBigger(pointy); // instead of passing by  var, we can also input a pointer as arg.
+    cout <<*pointy;
 
-    int numero = 10;
-    int salario = 2356;
-    int* pointer = &numero; // creating a pointer with type* and passing the var by ref with &nameOfVar
-    // pointer needs to be the same data type
+    // makeShitBigger(shit); // inputting just the var wont work, c++ gets mad
 
-    cout << *pointer << endl; //using the pointer to print out the value of the thing it points to
-
-    *pointer = 666; //using the pointer to set the thing it point to instead of setting the thing by name directly
-
-    cout << numero << endl; // printing the modifier thing though a pointer to confirm it worked.
-
-    pointer = &salario; //a pointer can also be re-indicated
-    cout << *pointer << endl;
+    /*
+     * in this simple case, it is simpler and more modern to pass the arg by ref with &varName instead of a pointer
+     * the pointer method is outdated byt can still be encountered in legacy code
+     */
 
     return 0;
 }
